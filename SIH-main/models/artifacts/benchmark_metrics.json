@@ -1,0 +1,137 @@
+{
+  "dataset": "NASA C-MAPSS FD001",
+  "supported_subsets": [
+    "FD001"
+  ],
+  "total_test_engines": 100,
+  "selected_best_model": "lstm",
+  "model_selection_basis": "validation",
+  "models": {
+    "XGBoost": {
+      "rmse": 11.3541,
+      "mae": 6.196,
+      "r2": 0.9206,
+      "nasa_score": 441.29
+    },
+    "LSTM": {
+      "rmse": 10.6343,
+      "mae": 5.7465,
+      "r2": 0.9303,
+      "nasa_score": 400.77
+    },
+    "TCN": {
+      "rmse": 10.3056,
+      "mae": 6.1282,
+      "r2": 0.9345,
+      "nasa_score": 303.98
+    }
+  },
+  "validation_models": {
+    "XGBoost": {
+      "rmse": 11.063,
+      "mae": 5.9545,
+      "r2": 0.9274,
+      "nasa_score": 26615.15
+    },
+    "LSTM": {
+      "rmse": 10.676,
+      "mae": 5.8562,
+      "r2": 0.9345,
+      "nasa_score": 20731.48
+    },
+    "TCN": {
+      "rmse": 11.347,
+      "mae": 7.0104,
+      "r2": 0.926,
+      "nasa_score": 18775.5
+    }
+  },
+  "uncertainty_estimation": {
+    "method": "empirical_residual_conformal",
+    "nominal_confidence": 0.9,
+    "selected_best_model": "lstm",
+    "half_width_cycles": 11.38,
+    "residual_std": 10.61,
+    "q05_residual": -23.92,
+    "q95_residual": 6.38,
+    "test_coverage_pct": 89.0,
+    "models": {
+      "xgboost": {
+        "method": "empirical_residual_conformal",
+        "nominal_confidence": 0.9,
+        "half_width_cycles": 13.1,
+        "residual_std": 11.02,
+        "q05_residual": -25.22,
+        "q95_residual": 8.39,
+        "test_coverage_pct": 87.0
+      },
+      "lstm": {
+        "method": "empirical_residual_conformal",
+        "nominal_confidence": 0.9,
+        "half_width_cycles": 11.38,
+        "residual_std": 10.61,
+        "q05_residual": -23.92,
+        "q95_residual": 6.38,
+        "test_coverage_pct": 89.0
+      },
+      "tcn": {
+        "method": "empirical_residual_conformal",
+        "nominal_confidence": 0.9,
+        "half_width_cycles": 14.97,
+        "residual_std": 11.35,
+        "q05_residual": -22.95,
+        "q95_residual": 12.05,
+        "test_coverage_pct": 92.0
+      }
+    },
+    "calibrated_at": "2026-10-18T15:12:21.350654+00:00"
+  },
+  "anomaly_detection": {
+    "isolation_forest": {
+      "false_alert_rate_pct": 4.0,
+      "avg_detection_lead_time_cycles": 232.35,
+      "missed_failure_rate_pct": 0.0,
+      "total_units_evaluated": 20
+    },
+    "autoencoder": {
+      "false_alert_rate_pct": 4.33,
+      "avg_detection_lead_time_cycles": 212.6,
+      "missed_failure_rate_pct": 0.0,
+      "total_units_evaluated": 20
+    }
+  },
+  "data_audit": {
+    "total_records": 24177,
+    "missing_values": 0,
+    "duplicates": 0,
+    "invariant_sensors_dropped": [
+      "setting_1",
+      "setting_2",
+      "setting_3",
+      "s_1",
+      "s_5",
+      "s_6",
+      "s_10",
+      "s_16",
+      "s_18",
+      "s_19"
+    ],
+    "active_sensors_retained": [
+      "s_2",
+      "s_3",
+      "s_4",
+      "s_7",
+      "s_8",
+      "s_9",
+      "s_11",
+      "s_12",
+      "s_13",
+      "s_14",
+      "s_15",
+      "s_17",
+      "s_20",
+      "s_21"
+    ],
+    "engineered_features_count": 140
+  }
+}

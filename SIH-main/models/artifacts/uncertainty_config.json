@@ -1,0 +1,40 @@
+{
+  "method": "empirical_residual_conformal",
+  "nominal_confidence": 0.9,
+  "selected_best_model": "lstm",
+  "half_width_cycles": 11.38,
+  "residual_std": 10.61,
+  "q05_residual": -23.92,
+  "q95_residual": 6.38,
+  "test_coverage_pct": 89.0,
+  "models": {
+    "xgboost": {
+      "method": "empirical_residual_conformal",
+      "nominal_confidence": 0.9,
+      "half_width_cycles": 13.1,
+      "residual_std": 11.02,
+      "q05_residual": -25.22,
+      "q95_residual": 8.39,
+      "test_coverage_pct": 87.0
+    },
+    "lstm": {
+      "method": "empirical_residual_conformal",
+      "nominal_confidence": 0.9,
+      "half_width_cycles": 11.38,
+      "residual_std": 10.61,
+      "q05_residual": -23.92,
+      "q95_residual": 6.38,
+      "test_coverage_pct": 89.0
+    },
+    "tcn": {
+      "method": "empirical_residual_conformal",
+      "nominal_confidence": 0.9,
+      "half_width_cycles": 14.97,
+      "residual_std": 11.35,
+      "q05_residual": -22.95,
+      "q95_residual": 12.05,
+      "test_coverage_pct": 92.0
+    }
+  },
+  "calibrated_at": "2026-10-18T15:12:21.350654+00:00"
+}
