@@ -1,0 +1,63 @@
+{
+  "dataset": "NASA C-MAPSS FD001",
+  "total_test_engines": 100,
+  "models": {
+    "XGBoost": {
+      "rmse": 11.4012,
+      "mae": 6.1335,
+      "r2": 0.9199,
+      "nasa_score": 454.5
+    },
+    "LSTM": {
+      "rmse": 10.9007,
+      "mae": 6.2268,
+      "r2": 0.9268,
+      "nasa_score": 370.7
+    },
+    "TCN": {
+      "rmse": 10.6048,
+      "mae": 5.8121,
+      "r2": 0.9307,
+      "nasa_score": 350.74
+    }
+  },
+  "anomaly_detection": {
+    "false_alert_rate_pct": 4.0,
+    "avg_detection_lead_time_cycles": 237.82,
+    "missed_failure_rate_pct": 0.0,
+    "total_units_evaluated": 100
+  },
+  "data_audit": {
+    "total_records": 24177,
+    "missing_values": 0,
+    "duplicates": 0,
+    "invariant_sensors_dropped": [
+      "setting_1",
+      "setting_2",
+      "setting_3",
+      "s_1",
+      "s_5",
+      "s_6",
+      "s_10",
+      "s_16",
+      "s_18",
+      "s_19"
+    ],
+    "active_sensors_retained": [
+      "s_2",
+      "s_3",
+      "s_4",
+      "s_7",
+      "s_8",
+      "s_9",
+      "s_11",
+      "s_12",
+      "s_13",
+      "s_14",
+      "s_15",
+      "s_17",
+      "s_20",
+      "s_21"
+    ]
+  }
+}

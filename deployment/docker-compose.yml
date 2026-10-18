@@ -1,0 +1,71 @@
+version: "3.8"
+
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg15
+    container_name: sih-timescaledb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: turbofan_prognostics
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init_timescaledb.sql:/docker-entrypoint-initdb.d/init.sql
+      - timescaledb_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: sih-zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: sih-kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092,PLAINTEXT_INTERNAL://kafka:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  backend:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: sih-prognostics-api
+    depends_on:
+      - timescaledb
+      - kafka
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://postgres:password123@timescaledb:5432/turbofan_prognostics
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+    command: ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: sih-dashboard
+    depends_on:
+      - backend
+    ports:
+      - "8501:8501"
+    command: ["streamlit", "run", "dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    restart: unless-stopped
+
+volumes:
+  timescaledb_data:
