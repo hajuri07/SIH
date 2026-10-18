@@ -5,14 +5,18 @@ by emitting sequential flight cycles from test engines into the system.
 """
 
 import asyncio
-from datetime import datetime
+import logging
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 import pandas as pd
 
 from .config import settings
-from .db import save_telemetry, save_prediction
+from .db import save_telemetry, save_prediction, save_alert
 from .services import registry
+from .kafka_client import kafka_manager
+
+logger = logging.getLogger("vayupulse.simulator")
 
 
 class TelemetryStreamSimulator:
@@ -40,11 +44,11 @@ class TelemetryStreamSimulator:
         if self._test_df is None:
             self.load_data()
         if self._test_df is None:
-            print("[ERROR] StreamSimulator: No test dataset available.")
+            logger.error("StreamSimulator: No test dataset available in data/raw/.")
             return
 
-        unit_df = self._test_df[self._test_df["unit_nr"] == self.current_unit].sort_values("time_cycles")
-        print(f"[INFO] StreamSimulator started for Engine Unit {self.current_unit} ({len(unit_df)} cycles).")
+        unit_df = self._test_df[self._test_df["unit_nr"] == self.current_unit].sort_values("time_cycles").reset_index(drop=True)
+        logger.info(f"StreamSimulator started for Engine Unit {self.current_unit} ({len(unit_df)} cycles).")
 
         for _, row in unit_df.iterrows():
             if not self.is_running:
@@ -58,25 +62,54 @@ class TelemetryStreamSimulator:
                 "setting_3": float(row.get("setting_3", 100.0))
             }
 
-            # Ingest into time-series database
+            # 1. Ingest into time-series database
             await save_telemetry(self.current_unit, self.current_cycle, settings_dict, sensors)
             self.total_emitted += 1
 
-            # Proactive model inference if registry is loaded
+            # 2. Publish to Kafka topic if available
+            await kafka_manager.send_telemetry({
+                "unit_nr": self.current_unit,
+                "time_cycles": self.current_cycle,
+                "settings": settings_dict,
+                "sensors": sensors,
+                "timestamp": datetime.now(timezone.utc).isoformat()
+            })
+
+            # 3. Proactive model inference if registry is loaded
             if registry.is_loaded and registry.feature_engineer:
                 try:
-                    # Ingest single slice for inference
                     recent_cycles = unit_df[unit_df["time_cycles"] <= self.current_cycle].tail(30)
-                    rul = registry.predict_rul("xgboost", recent_cycles)
-                    is_anom, hi, status = registry.detect_anomaly(recent_cycles)
-                    await save_prediction(self.current_unit, self.current_cycle, "xgboost", rul, hi, status)
+                    model_type = registry.selected_best_model
+                    rul, ci = registry.predict_rul(model_type, recent_cycles)
+                    is_anom, hi, status, lead_time = registry.detect_anomaly(recent_cycles)
+
+                    await save_prediction(
+                        self.current_unit, self.current_cycle, model_type.upper(), rul, hi, status
+                    )
+
+                    # Persist alert if degradation observed
+                    if status in ("WARNING", "CRITICAL") or rul <= 25.0:
+                        alert_level = "CRITICAL" if (status == "CRITICAL" or rul <= 25.0) else "WARNING"
+                        alert_msg = (
+                            f"Live alert on Engine {self.current_unit} at cycle {self.current_cycle}: "
+                            f"Status {alert_level}, Predicted RUL {round(rul, 1)} cycles, Health Index {round(hi, 3)}."
+                        )
+                        await save_alert(self.current_unit, self.current_cycle, alert_level, hi, alert_msg)
+                        await kafka_manager.send_alert({
+                            "unit_nr": self.current_unit,
+                            "time_cycles": self.current_cycle,
+                            "alert_level": alert_level,
+                            "health_index": hi,
+                            "predicted_rul": rul,
+                            "message": alert_msg
+                        })
                 except Exception as e:
-                    pass
+                    logger.warning(f"Inference error during flight simulation cycle {self.current_cycle}: {e}")
 
             await asyncio.sleep(self.delay_seconds)
 
         self.is_running = False
-        print(f"[INFO] StreamSimulator completed for Engine Unit {self.current_unit}.")
+        logger.info(f"StreamSimulator completed for Engine Unit {self.current_unit}.")
 
     def start(self, unit_id: int = 1, speed: float = 0.5):
         if self.is_running:
@@ -99,7 +132,8 @@ class TelemetryStreamSimulator:
             "current_unit": self.current_unit,
             "current_cycle": self.current_cycle,
             "total_cycles_emitted": self.total_emitted,
-            "speed_seconds": self.delay_seconds
+            "speed_seconds": self.delay_seconds,
+            "kafka_streaming": kafka_manager.is_connected
         }
 
 

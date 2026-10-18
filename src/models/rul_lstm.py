@@ -165,7 +165,7 @@ class RULLSTMModel:
     @classmethod
     def load(cls, filepath: Path, device: Optional[str] = None) -> "RULLSTMModel":
         """Loads model checkpoint."""
-        checkpoint = torch.load(filepath, map_location=device or "cpu")
+        checkpoint = torch.load(filepath, map_location=device or "cpu", weights_only=False)
         model = cls(
             input_dim=checkpoint["input_dim"],
             hidden_dim=checkpoint["hidden_dim"],

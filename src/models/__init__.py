@@ -7,6 +7,7 @@ from .rul_xgboost import RULXGBoostModel
 from .rul_lstm import RULLSTMModel
 from .rul_tcn import RULTCNModel
 from .anomaly_detector import EngineAnomalyDetector
+from .autoencoder_detector import AutoencoderAnomalyDetector
 
 __all__ = [
     "compute_nasa_score",
@@ -15,5 +16,6 @@ __all__ = [
     "RULXGBoostModel",
     "RULLSTMModel",
     "RULTCNModel",
-    "EngineAnomalyDetector"
+    "EngineAnomalyDetector",
+    "AutoencoderAnomalyDetector"
 ]

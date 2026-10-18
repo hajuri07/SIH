@@ -158,6 +158,17 @@ class RULTCNModel:
             metrics.update({f"val_{k}": v for k, v in val_metrics.items()})
         return metrics
 
+    def predict(self, dataloader: DataLoader) -> np.ndarray:
+        """Generates predictions across a DataLoader."""
+        self.net.eval()
+        preds_list = []
+        with torch.no_grad():
+            for X_batch, _ in dataloader:
+                X_batch = X_batch.to(self.device)
+                preds = self.net(X_batch).cpu().numpy()
+                preds_list.extend(preds)
+        return np.clip(np.array(preds_list), a_min=0.0, a_max=None)
+
     def predict_single_sequence(self, seq_array: np.ndarray) -> float:
         self.net.eval()
         with torch.no_grad():
@@ -190,7 +201,7 @@ class RULTCNModel:
 
     @classmethod
     def load(cls, filepath: Path, device: Optional[str] = None) -> "RULTCNModel":
-        checkpoint = torch.load(filepath, map_location=device or "cpu")
+        checkpoint = torch.load(filepath, map_location=device or "cpu", weights_only=False)
         model = cls(
             input_dim=checkpoint["input_dim"],
             num_channels=checkpoint["num_channels"],

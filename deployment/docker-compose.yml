@@ -14,6 +14,11 @@ services:
       - ./init_timescaledb.sql:/docker-entrypoint-initdb.d/init.sql
       - timescaledb_data:/var/lib/postgresql/data
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d turbofan_prognostics"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
@@ -45,8 +50,10 @@ services:
       dockerfile: deployment/Dockerfile
     container_name: sih-prognostics-api
     depends_on:
-      - timescaledb
-      - kafka
+      timescaledb:
+        condition: service_healthy
+      kafka:
+        condition: service_started
     ports:
       - "8000:8000"
     environment:
@@ -54,6 +61,11 @@ services:
       KAFKA_BOOTSTRAP_SERVERS: kafka:29092
     command: ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   dashboard:
     build:
@@ -61,7 +73,8 @@ services:
       dockerfile: deployment/Dockerfile
     container_name: sih-dashboard
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     ports:
       - "8501:8501"
     command: ["streamlit", "run", "dashboard/app.py", "--server.port=8501", "--server.address=0.0.0.0"]

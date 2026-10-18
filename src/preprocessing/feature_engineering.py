@@ -27,6 +27,7 @@ class CMAPSSFeatureEngineer:
         self.window_sizes = list(window_sizes)
         self.scaler = scaler or MinMaxScaler(feature_range=(0, 1))
         self.feature_columns: List[str] = []
+        self.active_sensors: List[str] = []
         self.is_fitted: bool = False
 
     def add_rul_target(self, df: pd.DataFrame) -> pd.DataFrame:
@@ -52,7 +53,7 @@ class CMAPSSFeatureEngineer:
         - Rolling standard deviation (vibration / turbulence increase)
         - Differential from rolling mean (instantaneous drift)
         """
-        df = df.copy().sort_values(["unit_nr", "time_cycles"])
+        df = df.copy().sort_values(["unit_nr", "time_cycles"]).reset_index(drop=True)
         grouped = df.groupby("unit_nr")[sensor_cols]
 
         engineered_dfs = [df]
@@ -85,10 +86,11 @@ class CMAPSSFeatureEngineer:
         3. Fits MinMaxScaler on training features
         4. Returns normalized feature dataframe and feature column names
         """
+        self.active_sensors = list(sensor_cols)
         processed_df = self.add_rul_target(df) if is_train else df.copy()
 
         # Generate rolling temporal features
-        featured_df = self.compute_rolling_features(processed_df, sensor_cols)
+        featured_df = self.compute_rolling_features(processed_df, self.active_sensors)
 
         # Non-feature identifier and target columns
         non_feature_cols = {"unit_nr", "time_cycles", "rul", "rul_raw"}
@@ -103,7 +105,7 @@ class CMAPSSFeatureEngineer:
         return scaled_df, self.feature_columns
 
     def transform(
-        self, df: pd.DataFrame, sensor_cols: List[str]
+        self, df: pd.DataFrame, sensor_cols: Optional[List[str]] = None
     ) -> pd.DataFrame:
         """
         Transforms testing or streaming telemetry using frozen scaler parameters.
@@ -111,7 +113,14 @@ class CMAPSSFeatureEngineer:
         if not self.is_fitted:
             raise ValueError("CMAPSSFeatureEngineer must be fitted before calling transform.")
 
-        featured_df = self.compute_rolling_features(df, sensor_cols)
+        active_cols = self.active_sensors if self.active_sensors else (sensor_cols or [])
+        featured_df = self.compute_rolling_features(df, active_cols)
+
+        # Ensure all expected feature columns are present without fragmentation
+        missing_cols = [col for col in self.feature_columns if col not in featured_df.columns]
+        if missing_cols:
+            missing_df = pd.DataFrame(0.0, index=featured_df.index, columns=missing_cols)
+            featured_df = pd.concat([featured_df, missing_df], axis=1)
 
         scaled_features = self.scaler.transform(featured_df[self.feature_columns])
         scaled_df = featured_df.copy()
@@ -124,6 +133,7 @@ class CMAPSSFeatureEngineer:
         joblib.dump({
             "scaler": self.scaler,
             "feature_columns": self.feature_columns,
+            "active_sensors": self.active_sensors,
             "max_rul": self.max_rul,
             "window_sizes": self.window_sizes,
             "is_fitted": self.is_fitted
@@ -135,5 +145,6 @@ class CMAPSSFeatureEngineer:
         state = joblib.load(filepath)
         fe = cls(max_rul=state["max_rul"], window_sizes=state["window_sizes"], scaler=state["scaler"])
         fe.feature_columns = state["feature_columns"]
+        fe.active_sensors = state.get("active_sensors", [])
         fe.is_fitted = state["is_fitted"]
         return fe
