@@ -1,0 +1,68 @@
+{
+  "critical_engine": {
+    "scenario": "Lowest RUL in the fleet",
+    "unit_nr": 73,
+    "engine_id": "ENG-073",
+    "aircraft_id": "AC-020",
+    "tail_number": "VT-BXO",
+    "base_code": "HYD",
+    "true_rul_cycles": 12,
+    "health_status": "CRITICAL",
+    "work_orders": [
+      {
+        "work_order_id": "WO-2026-0020",
+        "priority": "P1",
+        "status": "PLANNED",
+        "task_type": "OVERHAUL",
+        "repair_slot_id": ""
+      }
+    ]
+  },
+  "warning_engine": {
+    "scenario": "Mid-life engine showing early drift",
+    "unit_nr": 16,
+    "engine_id": "ENG-016",
+    "aircraft_id": "AC-024",
+    "tail_number": "VT-SGW",
+    "base_code": "HYD",
+    "true_rul_cycles": 65,
+    "health_status": "WARNING",
+    "work_orders": []
+  },
+  "healthy_engine": {
+    "scenario": "Highest RUL in the fleet",
+    "unit_nr": 64,
+    "engine_id": "ENG-064",
+    "aircraft_id": "AC-002",
+    "tail_number": "VT-XIH",
+    "base_code": "BOM",
+    "true_rul_cycles": 276,
+    "health_status": "HEALTHY",
+    "work_orders": []
+  },
+  "aog_engine": {
+    "scenario": "P1 work order blocked by a part that is out of stock (AOG risk)",
+    "unit_nr": 76,
+    "engine_id": "ENG-076",
+    "aircraft_id": "AC-005",
+    "tail_number": "VT-RCS",
+    "base_code": "DEL",
+    "true_rul_cycles": 40,
+    "health_status": "CRITICAL",
+    "work_orders": [
+      {
+        "work_order_id": "WO-2026-0007",
+        "priority": "P1",
+        "status": "WAITING_PARTS",
+        "task_type": "SENSOR_REPLACEMENT",
+        "repair_slot_id": ""
+      }
+    ],
+    "missing_part": {
+      "part_id": "SP-0189",
+      "name": "Core Speed Sensor (Nc)",
+      "warehouse": "DEL",
+      "lead_time_days": 41
+    }
+  }
+}

@@ -1,0 +1,201 @@
+part_id,part_number,name,category,related_sensor,variant,warehouse_code,quantity_in_stock,reorder_level,unit_cost_inr,lead_time_days,is_critical
+SP-0001,PN-10007,HPC Rotor Blade Set,Compressor,s_3,Rev A,DEL,7,3,1008391.37,20,1
+SP-0002,PN-10014,HPC Rotor Blade Set,Compressor,s_3,Rev A,BOM,4,4,1663663.87,26,1
+SP-0003,PN-10021,HPC Rotor Blade Set,Compressor,s_3,Rev A,BLR,3,3,1017563.62,2,1
+SP-0004,PN-10028,HPC Rotor Blade Set,Compressor,s_3,Rev A,HYD,4,4,1965254.03,40,1
+SP-0005,PN-10035,HPC Stator Vane Assembly,Compressor,s_7,Rev A,DEL,8,4,1107630.86,15,1
+SP-0006,PN-10042,HPC Stator Vane Assembly,Compressor,s_7,Rev A,BOM,12,2,1648491.46,20,1
+SP-0007,PN-10049,HPC Stator Vane Assembly,Compressor,s_7,Rev A,BLR,11,3,237094.45,17,1
+SP-0008,PN-10056,HPC Stator Vane Assembly,Compressor,s_7,Rev A,HYD,4,2,371795.49,4,1
+SP-0009,PN-10063,LPC Blade Set,Compressor,s_2,Rev A,DEL,8,1,1140718.76,42,1
+SP-0010,PN-10070,LPC Blade Set,Compressor,s_2,Rev A,BOM,12,4,1237965.41,17,1
+SP-0011,PN-10077,LPC Blade Set,Compressor,s_2,Rev A,BLR,12,1,2232078.93,8,1
+SP-0012,PN-10084,LPC Blade Set,Compressor,s_2,Rev A,HYD,4,2,2011058.2,35,1
+SP-0013,PN-10091,Compressor Seal Kit,Compressor,s_11,Rev A,DEL,9,2,2294005.16,9,1
+SP-0014,PN-10098,Compressor Seal Kit,Compressor,s_11,Rev A,BOM,8,3,2375298.86,30,1
+SP-0015,PN-10105,Compressor Seal Kit,Compressor,s_11,Rev A,BLR,12,4,2077100.65,37,1
+SP-0016,PN-10112,Compressor Seal Kit,Compressor,s_11,Rev A,HYD,3,4,1127374.11,17,1
+SP-0017,PN-10119,HPT Blade Set,Turbine,s_4,Rev A,DEL,5,4,1568364.1,19,1
+SP-0018,PN-10126,HPT Blade Set,Turbine,s_4,Rev A,BOM,12,3,589295.97,23,1
+SP-0019,PN-10133,HPT Blade Set,Turbine,s_4,Rev A,BLR,9,1,349381.66,16,1
+SP-0020,PN-10140,HPT Blade Set,Turbine,s_4,Rev A,HYD,3,2,164315.21,28,1
+SP-0021,PN-10147,LPT Nozzle Guide Vane,Turbine,s_4,Rev A,DEL,8,4,159415.21,28,1
+SP-0022,PN-10154,LPT Nozzle Guide Vane,Turbine,s_4,Rev A,BOM,10,1,2142403.15,38,1
+SP-0023,PN-10161,LPT Nozzle Guide Vane,Turbine,s_4,Rev A,BLR,1,3,749337.18,26,1
+SP-0024,PN-10168,LPT Nozzle Guide Vane,Turbine,s_4,Rev A,HYD,7,2,1222620.78,19,1
+SP-0025,PN-10175,Turbine Shroud Segment,Turbine,,Rev A,DEL,1,4,842979.34,45,1
+SP-0026,PN-10182,Turbine Shroud Segment,Turbine,,Rev A,BOM,12,2,2101902.14,10,1
+SP-0027,PN-10189,Turbine Shroud Segment,Turbine,,Rev A,BLR,9,1,2267694.44,39,1
+SP-0028,PN-10196,Turbine Shroud Segment,Turbine,,Rev A,HYD,1,1,1608303.12,10,1
+SP-0029,PN-10203,HPT Cooling Air Valve,Turbine,s_20,Rev A,DEL,3,1,653350.16,22,1
+SP-0030,PN-10210,HPT Cooling Air Valve,Turbine,s_20,Rev A,BOM,6,3,1904029.35,26,1
+SP-0031,PN-10217,HPT Cooling Air Valve,Turbine,s_20,Rev A,BLR,7,3,2087937.64,32,1
+SP-0032,PN-10224,HPT Cooling Air Valve,Turbine,s_20,Rev A,HYD,0,1,2499769.94,24,1
+SP-0033,PN-10231,LPT Coolant Bleed Valve,Turbine,s_21,Rev A,DEL,2,1,1886566.08,17,1
+SP-0034,PN-10238,LPT Coolant Bleed Valve,Turbine,s_21,Rev A,BOM,1,2,599408.17,32,1
+SP-0035,PN-10245,LPT Coolant Bleed Valve,Turbine,s_21,Rev A,BLR,10,2,1164724.82,18,1
+SP-0036,PN-10252,LPT Coolant Bleed Valve,Turbine,s_21,Rev A,HYD,3,1,1945368.55,12,1
+SP-0037,PN-10259,Fuel Nozzle,Combustor,s_12,Rev A,DEL,2,1,2322502.37,38,1
+SP-0038,PN-10266,Fuel Nozzle,Combustor,s_12,Rev A,BOM,7,4,2353910.61,14,1
+SP-0039,PN-10273,Fuel Nozzle,Combustor,s_12,Rev A,BLR,0,2,258345.66,21,1
+SP-0040,PN-10280,Fuel Nozzle,Combustor,s_12,Rev A,HYD,10,1,1991383.13,38,1
+SP-0041,PN-10287,Igniter Plug,Combustor,,Rev A,DEL,6,4,1655157.27,6,1
+SP-0042,PN-10294,Igniter Plug,Combustor,,Rev A,BOM,6,1,2124540.76,33,1
+SP-0043,PN-10301,Igniter Plug,Combustor,,Rev A,BLR,6,4,1769442.37,29,1
+SP-0044,PN-10308,Igniter Plug,Combustor,,Rev A,HYD,9,3,1541317.24,36,1
+SP-0045,PN-10315,Combustor Liner,Combustor,,Rev A,DEL,8,4,2065033.56,39,1
+SP-0046,PN-10322,Combustor Liner,Combustor,,Rev A,BOM,4,1,700204.91,30,1
+SP-0047,PN-10329,Combustor Liner,Combustor,,Rev A,BLR,8,4,843645.96,33,1
+SP-0048,PN-10336,Combustor Liner,Combustor,,Rev A,HYD,3,4,533451.15,18,1
+SP-0049,PN-10343,Fuel Metering Unit,Fuel System,s_12,Rev A,DEL,10,3,1391254.41,35,0
+SP-0050,PN-10350,Fuel Metering Unit,Fuel System,s_12,Rev A,BOM,2,2,1801306.36,33,0
+SP-0051,PN-10357,Fuel Metering Unit,Fuel System,s_12,Rev A,BLR,4,4,1616173.64,33,0
+SP-0052,PN-10364,Fuel Metering Unit,Fuel System,s_12,Rev A,HYD,1,1,738412.01,27,0
+SP-0053,PN-10371,Fuel Pump,Fuel System,,Rev A,DEL,5,3,1185258.18,35,0
+SP-0054,PN-10378,Fuel Pump,Fuel System,,Rev A,BOM,12,3,882119.08,31,0
+SP-0055,PN-10385,Fuel Pump,Fuel System,,Rev A,BLR,5,2,305157.09,14,0
+SP-0056,PN-10392,Fuel Pump,Fuel System,,Rev A,HYD,12,2,482086.27,32,0
+SP-0057,PN-10399,Main Bearing No.3,Lubrication,s_9,Rev A,DEL,10,3,2451354.53,14,0
+SP-0058,PN-10406,Main Bearing No.3,Lubrication,s_9,Rev A,BOM,6,2,758459.9,36,0
+SP-0059,PN-10413,Main Bearing No.3,Lubrication,s_9,Rev A,BLR,1,1,1385183.98,10,0
+SP-0060,PN-10420,Main Bearing No.3,Lubrication,s_9,Rev A,HYD,8,1,2182308.46,38,0
+SP-0061,PN-10427,Oil Pump,Lubrication,,Rev A,DEL,8,4,854402.01,5,0
+SP-0062,PN-10434,Oil Pump,Lubrication,,Rev A,BOM,8,1,2056000.65,27,0
+SP-0063,PN-10441,Oil Pump,Lubrication,,Rev A,BLR,10,1,382710.61,38,0
+SP-0064,PN-10448,Oil Pump,Lubrication,,Rev A,HYD,2,2,299655.1,28,0
+SP-0065,PN-10455,Oil Filter,Lubrication,,Rev A,DEL,10,2,1940131.08,26,0
+SP-0066,PN-10462,Oil Filter,Lubrication,,Rev A,BOM,8,3,2150976.0,29,0
+SP-0067,PN-10469,Oil Filter,Lubrication,,Rev A,BLR,10,1,1525638.76,8,0
+SP-0068,PN-10476,Oil Filter,Lubrication,,Rev A,HYD,4,2,664556.73,7,0
+SP-0069,PN-10483,T24 Temperature Sensor,Sensors,s_2,Rev A,DEL,3,1,394705.41,28,0
+SP-0070,PN-10490,T24 Temperature Sensor,Sensors,s_2,Rev A,BOM,10,4,730983.19,16,0
+SP-0071,PN-10497,T24 Temperature Sensor,Sensors,s_2,Rev A,BLR,5,4,181664.68,16,0
+SP-0072,PN-10504,T24 Temperature Sensor,Sensors,s_2,Rev A,HYD,11,2,1065146.86,36,0
+SP-0073,PN-10511,T30 Temperature Sensor,Sensors,s_3,Rev A,DEL,3,3,2067271.37,6,0
+SP-0074,PN-10518,T30 Temperature Sensor,Sensors,s_3,Rev A,BOM,0,3,1489229.92,38,0
+SP-0075,PN-10525,T30 Temperature Sensor,Sensors,s_3,Rev A,BLR,8,1,1173870.13,21,0
+SP-0076,PN-10532,T30 Temperature Sensor,Sensors,s_3,Rev A,HYD,5,4,1096646.12,40,0
+SP-0077,PN-10539,T50 EGT Probe,Sensors,s_4,Rev A,DEL,0,4,1837396.67,40,0
+SP-0078,PN-10546,T50 EGT Probe,Sensors,s_4,Rev A,BOM,2,2,2404930.11,38,0
+SP-0079,PN-10553,T50 EGT Probe,Sensors,s_4,Rev A,BLR,1,3,1442312.47,13,0
+SP-0080,PN-10560,T50 EGT Probe,Sensors,s_4,Rev A,HYD,11,4,2290517.68,13,0
+SP-0081,PN-10567,P30 Pressure Transducer,Sensors,s_7,Rev A,DEL,7,4,2422761.87,32,0
+SP-0082,PN-10574,P30 Pressure Transducer,Sensors,s_7,Rev A,BOM,6,3,1676653.24,12,0
+SP-0083,PN-10581,P30 Pressure Transducer,Sensors,s_7,Rev A,BLR,12,4,723391.62,27,0
+SP-0084,PN-10588,P30 Pressure Transducer,Sensors,s_7,Rev A,HYD,9,1,1139245.47,22,0
+SP-0085,PN-10595,Fan Speed Sensor (Nf),Sensors,s_8,Rev A,DEL,2,4,2162816.82,2,0
+SP-0086,PN-10602,Fan Speed Sensor (Nf),Sensors,s_8,Rev A,BOM,9,4,1035465.94,14,0
+SP-0087,PN-10609,Fan Speed Sensor (Nf),Sensors,s_8,Rev A,BLR,10,4,1565020.22,5,0
+SP-0088,PN-10616,Fan Speed Sensor (Nf),Sensors,s_8,Rev A,HYD,9,2,2319471.21,30,0
+SP-0089,PN-10623,Core Speed Sensor (Nc),Sensors,s_9,Rev A,DEL,8,1,76058.13,42,0
+SP-0090,PN-10630,Core Speed Sensor (Nc),Sensors,s_9,Rev A,BOM,4,2,779632.35,2,0
+SP-0091,PN-10637,Core Speed Sensor (Nc),Sensors,s_9,Rev A,BLR,2,2,2480673.82,9,0
+SP-0092,PN-10644,Core Speed Sensor (Nc),Sensors,s_9,Rev A,HYD,2,2,1247945.26,20,0
+SP-0093,PN-10651,Customer Bleed Valve,Bleed System,s_17,Rev A,DEL,5,4,2087470.97,32,0
+SP-0094,PN-10658,Customer Bleed Valve,Bleed System,s_17,Rev A,BOM,9,2,961430.69,40,0
+SP-0095,PN-10665,Customer Bleed Valve,Bleed System,s_17,Rev A,BLR,3,1,693513.52,28,0
+SP-0096,PN-10672,Customer Bleed Valve,Bleed System,s_17,Rev A,HYD,9,3,2052091.49,20,0
+SP-0097,PN-10679,Variable Bleed Valve,Bleed System,s_15,Rev A,DEL,10,4,2163690.44,30,0
+SP-0098,PN-10686,Variable Bleed Valve,Bleed System,s_15,Rev A,BOM,6,3,1381585.87,36,0
+SP-0099,PN-10693,Variable Bleed Valve,Bleed System,s_15,Rev A,BLR,6,2,2452013.48,17,0
+SP-0100,PN-10700,Variable Bleed Valve,Bleed System,s_15,Rev A,HYD,4,4,112943.66,32,0
+SP-0101,PN-10707,HPC Rotor Blade Set,Compressor,s_3,Rev B,DEL,7,4,2471081.35,43,1
+SP-0102,PN-10714,HPC Rotor Blade Set,Compressor,s_3,Rev B,BOM,8,1,319110.69,39,1
+SP-0103,PN-10721,HPC Rotor Blade Set,Compressor,s_3,Rev B,BLR,2,4,252880.4,31,1
+SP-0104,PN-10728,HPC Rotor Blade Set,Compressor,s_3,Rev B,HYD,0,2,1027306.63,43,1
+SP-0105,PN-10735,HPC Stator Vane Assembly,Compressor,s_7,Rev B,DEL,2,4,1954687.13,18,1
+SP-0106,PN-10742,HPC Stator Vane Assembly,Compressor,s_7,Rev B,BOM,12,4,1625992.28,23,1
+SP-0107,PN-10749,HPC Stator Vane Assembly,Compressor,s_7,Rev B,BLR,9,4,2385532.42,42,1
+SP-0108,PN-10756,HPC Stator Vane Assembly,Compressor,s_7,Rev B,HYD,8,1,1545178.82,17,1
+SP-0109,PN-10763,LPC Blade Set,Compressor,s_2,Rev B,DEL,5,2,1867928.85,29,1
+SP-0110,PN-10770,LPC Blade Set,Compressor,s_2,Rev B,BOM,11,1,1111421.66,21,1
+SP-0111,PN-10777,LPC Blade Set,Compressor,s_2,Rev B,BLR,1,3,1991174.09,20,1
+SP-0112,PN-10784,LPC Blade Set,Compressor,s_2,Rev B,HYD,7,2,613516.79,28,1
+SP-0113,PN-10791,Compressor Seal Kit,Compressor,s_11,Rev B,DEL,3,2,440973.11,41,1
+SP-0114,PN-10798,Compressor Seal Kit,Compressor,s_11,Rev B,BOM,10,2,1246177.46,39,1
+SP-0115,PN-10805,Compressor Seal Kit,Compressor,s_11,Rev B,BLR,8,3,1151087.97,44,1
+SP-0116,PN-10812,Compressor Seal Kit,Compressor,s_11,Rev B,HYD,0,4,2253418.72,45,1
+SP-0117,PN-10819,HPT Blade Set,Turbine,s_4,Rev B,DEL,2,4,2363308.14,39,1
+SP-0118,PN-10826,HPT Blade Set,Turbine,s_4,Rev B,BOM,7,3,1144262.19,21,1
+SP-0119,PN-10833,HPT Blade Set,Turbine,s_4,Rev B,BLR,7,4,270206.56,26,1
+SP-0120,PN-10840,HPT Blade Set,Turbine,s_4,Rev B,HYD,10,3,2481759.34,20,1
+SP-0121,PN-10847,LPT Nozzle Guide Vane,Turbine,s_4,Rev B,DEL,0,4,689103.03,38,1
+SP-0122,PN-10854,LPT Nozzle Guide Vane,Turbine,s_4,Rev B,BOM,12,1,2276899.92,33,1
+SP-0123,PN-10861,LPT Nozzle Guide Vane,Turbine,s_4,Rev B,BLR,5,2,1519234.24,24,1
+SP-0124,PN-10868,LPT Nozzle Guide Vane,Turbine,s_4,Rev B,HYD,4,3,1695700.09,44,1
+SP-0125,PN-10875,Turbine Shroud Segment,Turbine,,Rev B,DEL,3,1,2258895.65,43,1
+SP-0126,PN-10882,Turbine Shroud Segment,Turbine,,Rev B,BOM,0,4,87277.87,25,1
+SP-0127,PN-10889,Turbine Shroud Segment,Turbine,,Rev B,BLR,2,3,819490.94,28,1
+SP-0128,PN-10896,Turbine Shroud Segment,Turbine,,Rev B,HYD,3,3,1329007.52,19,1
+SP-0129,PN-10903,HPT Cooling Air Valve,Turbine,s_20,Rev B,DEL,5,4,2418590.65,20,1
+SP-0130,PN-10910,HPT Cooling Air Valve,Turbine,s_20,Rev B,BOM,6,1,1172955.15,6,1
+SP-0131,PN-10917,HPT Cooling Air Valve,Turbine,s_20,Rev B,BLR,4,4,2418305.29,37,1
+SP-0132,PN-10924,HPT Cooling Air Valve,Turbine,s_20,Rev B,HYD,7,1,664088.61,9,1
+SP-0133,PN-10931,LPT Coolant Bleed Valve,Turbine,s_21,Rev B,DEL,11,3,1463061.99,42,1
+SP-0134,PN-10938,LPT Coolant Bleed Valve,Turbine,s_21,Rev B,BOM,2,2,1180806.26,41,1
+SP-0135,PN-10945,LPT Coolant Bleed Valve,Turbine,s_21,Rev B,BLR,9,3,2288478.75,16,1
+SP-0136,PN-10952,LPT Coolant Bleed Valve,Turbine,s_21,Rev B,HYD,11,4,2273831.55,21,1
+SP-0137,PN-10959,Fuel Nozzle,Combustor,s_12,Rev B,DEL,2,2,117185.64,4,1
+SP-0138,PN-10966,Fuel Nozzle,Combustor,s_12,Rev B,BOM,8,1,246591.23,36,1
+SP-0139,PN-10973,Fuel Nozzle,Combustor,s_12,Rev B,BLR,8,3,1677533.6,36,1
+SP-0140,PN-10980,Fuel Nozzle,Combustor,s_12,Rev B,HYD,12,2,2213992.8,43,1
+SP-0141,PN-10987,Igniter Plug,Combustor,,Rev B,DEL,8,4,2347876.45,19,1
+SP-0142,PN-10994,Igniter Plug,Combustor,,Rev B,BOM,0,3,546305.13,30,1
+SP-0143,PN-11001,Igniter Plug,Combustor,,Rev B,BLR,6,1,2452395.58,25,1
+SP-0144,PN-11008,Igniter Plug,Combustor,,Rev B,HYD,11,3,155133.02,19,1
+SP-0145,PN-11015,Combustor Liner,Combustor,,Rev B,DEL,2,4,232816.87,15,1
+SP-0146,PN-11022,Combustor Liner,Combustor,,Rev B,BOM,10,1,130243.96,23,1
+SP-0147,PN-11029,Combustor Liner,Combustor,,Rev B,BLR,3,2,175250.94,37,1
+SP-0148,PN-11036,Combustor Liner,Combustor,,Rev B,HYD,4,2,824084.65,11,1
+SP-0149,PN-11043,Fuel Metering Unit,Fuel System,s_12,Rev B,DEL,10,1,696078.02,11,0
+SP-0150,PN-11050,Fuel Metering Unit,Fuel System,s_12,Rev B,BOM,9,3,1997090.5,9,0
+SP-0151,PN-11057,Fuel Metering Unit,Fuel System,s_12,Rev B,BLR,1,2,41091.38,17,0
+SP-0152,PN-11064,Fuel Metering Unit,Fuel System,s_12,Rev B,HYD,1,2,666357.3,10,0
+SP-0153,PN-11071,Fuel Pump,Fuel System,,Rev B,DEL,9,1,1865180.53,32,0
+SP-0154,PN-11078,Fuel Pump,Fuel System,,Rev B,BOM,6,1,1132205.53,16,0
+SP-0155,PN-11085,Fuel Pump,Fuel System,,Rev B,BLR,1,3,1147274.14,3,0
+SP-0156,PN-11092,Fuel Pump,Fuel System,,Rev B,HYD,0,4,2118857.16,29,0
+SP-0157,PN-11099,Main Bearing No.3,Lubrication,s_9,Rev B,DEL,8,4,187432.83,7,0
+SP-0158,PN-11106,Main Bearing No.3,Lubrication,s_9,Rev B,BOM,3,1,318974.2,41,0
+SP-0159,PN-11113,Main Bearing No.3,Lubrication,s_9,Rev B,BLR,9,3,954737.38,40,0
+SP-0160,PN-11120,Main Bearing No.3,Lubrication,s_9,Rev B,HYD,8,4,251549.44,9,0
+SP-0161,PN-11127,Oil Pump,Lubrication,,Rev B,DEL,11,2,1077454.57,16,0
+SP-0162,PN-11134,Oil Pump,Lubrication,,Rev B,BOM,8,4,1042310.17,8,0
+SP-0163,PN-11141,Oil Pump,Lubrication,,Rev B,BLR,6,3,938255.35,11,0
+SP-0164,PN-11148,Oil Pump,Lubrication,,Rev B,HYD,8,1,231697.07,7,0
+SP-0165,PN-11155,Oil Filter,Lubrication,,Rev B,DEL,2,3,2030176.14,37,0
+SP-0166,PN-11162,Oil Filter,Lubrication,,Rev B,BOM,0,3,1676353.11,28,0
+SP-0167,PN-11169,Oil Filter,Lubrication,,Rev B,BLR,11,4,2170758.0,5,0
+SP-0168,PN-11176,Oil Filter,Lubrication,,Rev B,HYD,10,3,881708.88,38,0
+SP-0169,PN-11183,T24 Temperature Sensor,Sensors,s_2,Rev B,DEL,3,4,563715.19,8,0
+SP-0170,PN-11190,T24 Temperature Sensor,Sensors,s_2,Rev B,BOM,9,3,290753.74,19,0
+SP-0171,PN-11197,T24 Temperature Sensor,Sensors,s_2,Rev B,BLR,7,1,1524051.31,44,0
+SP-0172,PN-11204,T24 Temperature Sensor,Sensors,s_2,Rev B,HYD,5,1,454318.52,21,0
+SP-0173,PN-11211,T30 Temperature Sensor,Sensors,s_3,Rev B,DEL,6,1,456788.27,11,0
+SP-0174,PN-11218,T30 Temperature Sensor,Sensors,s_3,Rev B,BOM,7,1,358119.14,42,0
+SP-0175,PN-11225,T30 Temperature Sensor,Sensors,s_3,Rev B,BLR,2,2,942981.24,31,0
+SP-0176,PN-11232,T30 Temperature Sensor,Sensors,s_3,Rev B,HYD,6,3,1805103.54,38,0
+SP-0177,PN-11239,T50 EGT Probe,Sensors,s_4,Rev B,DEL,1,2,396895.1,41,0
+SP-0178,PN-11246,T50 EGT Probe,Sensors,s_4,Rev B,BOM,0,1,683168.7,44,0
+SP-0179,PN-11253,T50 EGT Probe,Sensors,s_4,Rev B,BLR,10,4,1037802.61,15,0
+SP-0180,PN-11260,T50 EGT Probe,Sensors,s_4,Rev B,HYD,2,3,1077064.43,20,0
+SP-0181,PN-11267,P30 Pressure Transducer,Sensors,s_7,Rev B,DEL,10,4,1319227.53,21,0
+SP-0182,PN-11274,P30 Pressure Transducer,Sensors,s_7,Rev B,BOM,0,4,2461176.36,5,0
+SP-0183,PN-11281,P30 Pressure Transducer,Sensors,s_7,Rev B,BLR,0,3,2363528.92,10,0
+SP-0184,PN-11288,P30 Pressure Transducer,Sensors,s_7,Rev B,HYD,5,3,303480.92,33,0
+SP-0185,PN-11295,Fan Speed Sensor (Nf),Sensors,s_8,Rev B,DEL,3,2,952997.78,16,0
+SP-0186,PN-11302,Fan Speed Sensor (Nf),Sensors,s_8,Rev B,BOM,11,3,183900.44,4,0
+SP-0187,PN-11309,Fan Speed Sensor (Nf),Sensors,s_8,Rev B,BLR,8,1,2155826.59,38,0
+SP-0188,PN-11316,Fan Speed Sensor (Nf),Sensors,s_8,Rev B,HYD,7,4,726629.95,27,0
+SP-0189,PN-11323,Core Speed Sensor (Nc),Sensors,s_9,Rev B,DEL,0,3,432995.46,41,0
+SP-0190,PN-11330,Core Speed Sensor (Nc),Sensors,s_9,Rev B,BOM,12,3,223972.18,8,0
+SP-0191,PN-11337,Core Speed Sensor (Nc),Sensors,s_9,Rev B,BLR,10,4,1311810.51,27,0
+SP-0192,PN-11344,Core Speed Sensor (Nc),Sensors,s_9,Rev B,HYD,12,3,557043.86,12,0
+SP-0193,PN-11351,Customer Bleed Valve,Bleed System,s_17,Rev B,DEL,0,1,1328389.63,14,0
+SP-0194,PN-11358,Customer Bleed Valve,Bleed System,s_17,Rev B,BOM,6,3,1819538.25,43,0
+SP-0195,PN-11365,Customer Bleed Valve,Bleed System,s_17,Rev B,BLR,4,1,369524.77,14,0
+SP-0196,PN-11372,Customer Bleed Valve,Bleed System,s_17,Rev B,HYD,3,1,446156.74,42,0
+SP-0197,PN-11379,Variable Bleed Valve,Bleed System,s_15,Rev B,DEL,10,4,1704109.16,38,0
+SP-0198,PN-11386,Variable Bleed Valve,Bleed System,s_15,Rev B,BOM,10,3,2161160.2,42,0
+SP-0199,PN-11393,Variable Bleed Valve,Bleed System,s_15,Rev B,BLR,8,1,1174427.02,42,0
+SP-0200,PN-11400,Variable Bleed Valve,Bleed System,s_15,Rev B,HYD,5,1,882447.79,6,0

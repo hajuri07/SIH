@@ -1,0 +1,61 @@
+defect_id,aircraft_id,engine_id,reported_at,source,reported_by,ata_chapter,sensor,severity,description,status
+DEF-0001,AC-043,ENG-060,2026-09-11 13:00:00,PILOT_REPORT,Captain,72,,MINOR,Borescope: light thermal-barrier coating loss on HPT blade (within limits),OPEN
+DEF-0002,AC-023,ENG-048,2026-09-11 14:00:00,ROUTINE_INSPECTION,Captain,72,,MINOR,Igniter plug erosion found during scheduled inspection,IN_REVIEW
+DEF-0003,AC-028,ENG-066,2026-09-12 01:00:00,PILOT_REPORT,First Officer,72,,MAJOR,Borescope: light thermal-barrier coating loss on HPT blade (within limits),WORK_ORDER_CREATED
+DEF-0004,AC-032,ENG-026,2026-09-13 02:00:00,PILOT_REPORT,Maintenance Controller,79,,MINOR,Oil filter differential pressure indication intermittent,IN_REVIEW
+DEF-0005,AC-007,ENG-052,2026-09-15 16:00:00,ROUTINE_INSPECTION,Line Engineer,72,,MAJOR,Igniter plug erosion found during scheduled inspection,WORK_ORDER_CREATED
+DEF-0006,AC-017,ENG-017,2026-09-22 21:00:00,BOROSCOPE,Captain,72,,MINOR,Borescope: light thermal-barrier coating loss on HPT blade (within limits),IN_REVIEW
+DEF-0007,AC-017,ENG-028,2026-09-23 21:00:00,BOROSCOPE,Maintenance Controller,72,,MINOR,Igniter plug erosion found during scheduled inspection,IN_REVIEW
+DEF-0008,AC-014,ENG-058,2026-09-24 17:00:00,PILOT_REPORT,Maintenance Controller,72,,MINOR,Borescope: light thermal-barrier coating loss on HPT blade (within limits),OPEN
+DEF-0009,AC-026,ENG-082,2026-09-26 01:00:00,PILOT_REPORT,Maintenance Controller,71,,MINOR,Bleed valve actuator slow to respond during ground run,IN_REVIEW
+DEF-0010,AC-012,,2026-09-28 21:00:00,ROUTINE_INSPECTION,Captain,31,,MINOR,Cockpit display flicker on ground,IN_REVIEW
+DEF-0011,AC-007,ENG-045,2026-09-29 21:00:00,PILOT_REPORT,Line Engineer,73,,MINOR,Minor fuel weep at fuel nozzle B-line fitting,OPEN
+DEF-0012,AC-024,ENG-016,2026-09-30 02:00:00,ROUTINE_INSPECTION,First Officer,73,,MINOR,Fuel pump outlet pressure fluctuation reported by crew,OPEN
+DEF-0013,AC-012,,2026-10-01 14:00:00,ROUTINE_INSPECTION,Captain,31,,MINOR,Cockpit display flicker on ground,OPEN
+DEF-0014,AC-031,ENG-093,2026-10-02 14:00:00,ROUTINE_INSPECTION,Maintenance Controller,79,,MAJOR,Oil quantity trending low over last 5 flights,WORK_ORDER_CREATED
+DEF-0015,AC-040,,2026-10-05 22:00:00,BOROSCOPE,Captain,52,,MINOR,Left main gear door seal worn,IN_REVIEW
+DEF-0016,AC-034,,2026-10-09 18:00:00,ROUTINE_INSPECTION,Line Engineer,21,,MINOR,Cabin pressure controller fault message (reset cleared),IN_REVIEW
+DEF-0017,AC-013,,2026-10-14 19:00:00,PILOT_REPORT,Line Engineer,31,,MINOR,Cockpit display flicker on ground,OPEN
+DEF-0018,AC-034,ENG-070,2026-10-14 21:00:00,PILOT_REPORT,First Officer,71,,MAJOR,Bleed valve actuator slow to respond during ground run,WORK_ORDER_CREATED
+DEF-0019,AC-014,ENG-058,2026-10-21 16:00:00,PILOT_REPORT,Line Engineer,79,,MINOR,Oil filter differential pressure indication intermittent,IN_REVIEW
+DEF-0020,AC-002,ENG-003,2026-10-22 14:00:00,AI_ALERT,AI Monitoring System,72,s_9,MAJOR,Core speed (Nc) deviating 7.5 rpm from expected. Predicted RUL about 55 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0021,AC-034,ENG-014,2026-10-22 20:00:00,AI_ALERT,AI Monitoring System,72,s_21,CRITICAL,LPT coolant bleed (W32) reduced by 13.49 lbm/s. Predicted RUL about 13 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0022,AC-005,ENG-076,2026-10-23 03:00:00,AI_ALERT,AI Monitoring System,72,s_9,CRITICAL,Core speed (Nc) deviating 5.1 rpm from expected. Predicted RUL about 44 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0023,AC-042,ENG-071,2026-10-23 04:00:00,AI_ALERT,AI Monitoring System,72,s_17,CRITICAL,Bleed enthalpy (htBleed) elevated by 7.4 BTU/lbm. Predicted RUL about 39 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0024,AC-035,ENG-065,2026-10-23 13:00:00,AI_ALERT,AI Monitoring System,72,s_3,CRITICAL,HPC outlet temperature (T30) running 3.4 degR above baseline. Predicted RUL about 25 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0025,AC-025,ENG-062,2026-10-23 16:00:00,AI_ALERT,AI Monitoring System,72,s_2,CRITICAL,LPC outlet temperature (T24) drifting 5.1 degR above baseline. Predicted RUL about 19 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0026,AC-022,ENG-078,2026-10-23 16:00:00,ROUTINE_INSPECTION,Line Engineer,79,,MINOR,Oil filter differential pressure indication intermittent,IN_REVIEW
+DEF-0027,AC-047,ENG-021,2026-10-24 01:00:00,AI_ALERT,AI Monitoring System,72,s_4,CRITICAL,LPT outlet temperature (T50) running 12.8 degR above baseline. Predicted RUL about 29 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0028,AC-043,ENG-060,2026-10-24 11:00:00,AI_ALERT,AI Monitoring System,72,s_8,CRITICAL,Fan speed (Nf) deviating 4.8 rpm from expected. Predicted RUL about 32 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0029,AC-050,ENG-012,2026-10-24 13:00:00,AI_ALERT,AI Monitoring System,72,s_8,CRITICAL,Fan speed (Nf) deviating 13.0 rpm from expected. Predicted RUL about 25 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0030,AC-028,ENG-072,2026-10-24 14:00:00,AI_ALERT,AI Monitoring System,72,s_9,MAJOR,Core speed (Nc) deviating 1.7 rpm from expected. Predicted RUL about 81 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0031,AC-024,ENG-004,2026-10-24 19:00:00,AI_ALERT,AI Monitoring System,72,s_3,CRITICAL,HPC outlet temperature (T30) running 10.4 degR above baseline. Predicted RUL about 18 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0032,AC-021,ENG-005,2026-10-25 04:00:00,PILOT_REPORT,Line Engineer,72,,MINOR,Igniter plug erosion found during scheduled inspection,OPEN
+DEF-0033,AC-031,ENG-024,2026-10-25 11:00:00,AI_ALERT,AI Monitoring System,72,s_9,MAJOR,Core speed (Nc) deviating 6.5 rpm from expected. Predicted RUL about 53 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0034,AC-041,ENG-099,2026-10-25 22:00:00,AI_ALERT,AI Monitoring System,72,s_8,MAJOR,Fan speed (Nf) deviating 5.2 rpm from expected. Predicted RUL about 46 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0035,AC-015,ENG-025,2026-10-25 23:00:00,AI_ALERT,AI Monitoring System,72,s_8,CRITICAL,Fan speed (Nf) deviating 11.8 rpm from expected. Predicted RUL about 47 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0036,AC-032,ENG-026,2026-10-26 00:00:00,AI_ALERT,AI Monitoring System,72,s_8,MAJOR,Fan speed (Nf) deviating 8.7 rpm from expected. Predicted RUL about 78 cycles (TCN).,IN_REVIEW
+DEF-0037,AC-021,ENG-053,2026-10-26 02:00:00,AI_ALERT,AI Monitoring System,72,s_4,MAJOR,LPT outlet temperature (T50) running 2.3 degR above baseline. Predicted RUL about 43 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0038,AC-020,ENG-073,2026-10-26 05:00:00,AI_ALERT,AI Monitoring System,72,s_15,CRITICAL,Bypass ratio (BPR) drifting 9.204 below baseline. Predicted RUL about 12 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0039,AC-007,ENG-045,2026-10-27 04:00:00,AI_ALERT,AI Monitoring System,72,s_11,CRITICAL,HPC outlet static pressure (Ps30) dropped 8.53 psia below baseline. Predicted RUL about 40 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0040,AC-006,ENG-043,2026-10-27 05:00:00,AI_ALERT,AI Monitoring System,72,s_12,CRITICAL,Fuel flow ratio (Phi) shifted 13.50 pps/psi from baseline. Predicted RUL about 13 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0041,AC-042,ENG-033,2026-10-27 13:00:00,AI_ALERT,AI Monitoring System,72,s_8,MAJOR,Fan speed (Nf) deviating 1.6 rpm from expected. Predicted RUL about 68 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0042,AC-021,ENG-005,2026-10-27 15:00:00,AI_ALERT,AI Monitoring System,72,s_8,MAJOR,Fan speed (Nf) deviating 2.6 rpm from expected. Predicted RUL about 76 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0043,AC-040,ENG-069,2026-10-27 23:00:00,AI_ALERT,AI Monitoring System,72,s_8,CRITICAL,Fan speed (Nf) deviating 7.6 rpm from expected. Predicted RUL about 39 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0044,AC-027,ENG-074,2026-10-28 04:00:00,AI_ALERT,AI Monitoring System,72,s_9,MAJOR,Core speed (Nc) deviating 3.2 rpm from expected. Predicted RUL about 67 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0045,AC-036,ENG-001,2026-10-28 13:00:00,AI_ALERT,AI Monitoring System,72,s_17,CRITICAL,Bleed enthalpy (htBleed) elevated by 11.2 BTU/lbm. Predicted RUL about 20 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0046,AC-042,,2026-10-28 16:00:00,ROUTINE_INSPECTION,Line Engineer,52,,MINOR,Left main gear door seal worn,IN_REVIEW
+DEF-0047,AC-017,ENG-028,2026-10-28 18:00:00,AI_ALERT,AI Monitoring System,72,s_17,MAJOR,Bleed enthalpy (htBleed) elevated by 8.9 BTU/lbm. Predicted RUL about 71 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0048,AC-001,ENG-061,2026-10-29 03:00:00,AI_ALERT,AI Monitoring System,72,s_3,MAJOR,HPC outlet temperature (T30) running 7.3 degR above baseline. Predicted RUL about 42 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0049,AC-027,ENG-032,2026-10-29 11:00:00,AI_ALERT,AI Monitoring System,72,s_15,CRITICAL,Bypass ratio (BPR) drifting 8.857 below baseline. Predicted RUL about 29 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0050,AC-016,ENG-067,2026-10-30 02:00:00,AI_ALERT,AI Monitoring System,72,s_2,CRITICAL,LPC outlet temperature (T24) drifting 10.2 degR above baseline. Predicted RUL about 46 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0051,AC-029,ENG-083,2026-10-30 16:00:00,AI_ALERT,AI Monitoring System,72,s_15,CRITICAL,Bypass ratio (BPR) drifting 6.401 below baseline. Predicted RUL about 21 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0052,AC-017,ENG-017,2026-10-31 01:00:00,AI_ALERT,AI Monitoring System,72,s_17,CRITICAL,Bleed enthalpy (htBleed) elevated by 3.7 BTU/lbm. Predicted RUL about 16 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0053,AC-022,ENG-006,2026-10-31 04:00:00,AI_ALERT,AI Monitoring System,72,s_7,CRITICAL,HPC outlet pressure (P30) dropped 4.9 psia below baseline. Predicted RUL about 16 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0054,AC-029,ENG-089,2026-10-31 04:00:00,AI_ALERT,AI Monitoring System,72,s_12,CRITICAL,Fuel flow ratio (Phi) shifted 10.21 pps/psi from baseline. Predicted RUL about 21 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0055,AC-008,ENG-046,2026-10-31 10:00:00,AI_ALERT,AI Monitoring System,72,s_9,CRITICAL,Core speed (Nc) deviating 4.9 rpm from expected. Predicted RUL about 18 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0056,AC-004,ENG-042,2026-10-31 23:00:00,AI_ALERT,AI Monitoring System,72,s_15,MAJOR,Bypass ratio (BPR) drifting 2.349 below baseline. Predicted RUL about 55 cycles (TCN).,OPEN
+DEF-0057,AC-033,ENG-039,2026-11-01 01:00:00,AI_ALERT,AI Monitoring System,72,s_15,CRITICAL,Bypass ratio (BPR) drifting 13.065 below baseline. Predicted RUL about 29 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0058,AC-038,ENG-056,2026-11-01 06:00:00,AI_ALERT,AI Monitoring System,72,s_12,CRITICAL,Fuel flow ratio (Phi) shifted 7.83 pps/psi from baseline. Predicted RUL about 14 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0059,AC-030,ENG-079,2026-11-01 19:00:00,AI_ALERT,AI Monitoring System,72,s_21,CRITICAL,LPT coolant bleed (W32) reduced by 11.84 lbm/s. Predicted RUL about 19 cycles (TCN).,WORK_ORDER_CREATED
+DEF-0060,AC-025,ENG-096,2026-11-02 00:00:00,AI_ALERT,AI Monitoring System,72,s_12,CRITICAL,Fuel flow ratio (Phi) shifted 2.48 pps/psi from baseline. Predicted RUL about 29 cycles (TCN).,WORK_ORDER_CREATED
